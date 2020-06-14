@@ -1,0 +1,90 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=devide-width,initial-scale=1">
+  <link rel="stylesheet" href="heading.css">
+  <link rel="stylesheet" type="text/css" href="button.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  </script>
+  <style>
+    @viewport {
+      zoom: 1.0;
+      width: extend-to-zoom;
+    }
+
+    @-ms-viewport {
+      width: extend-to-zoom;
+      zoom: 1.0;
+
+    }
+
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+      $("#flip").click(function () {
+        $("#flip").slideToggle(1000);
+        $("#flipp").show(1000);
+        $("#panel").fadeToggle(4000);
+      });
+    });
+
+    $(document).ready(function () {
+      $("#flipp").click(function () {
+        $("#flipp").hide(3000);
+        $("#flip").show(3000);
+        $(".demo1").fadeToggle(2000);
+        $(".demo2").fadeToggle(2500);
+        $(".demo3").fadeToggle(3000);
+        $(".demo4").fadeToggle(3500);
+      });
+    });
+
+    $(document).ready(function () {
+      $("div.demo3").click(function () {
+        $("#panel").hide(3000);
+        $("#flip").hide(3000);
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <video autoplay muted loop id="myVideo">
+    <source src="BGVEDIO2.mp4" type="video/mp4">
+  </video>
+  <br><br><br>
+
+  <b id="flip" class="b1" style="cursor: pointer ;">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    MULTITASKING CONVERTER
+  </b>
+  <b id="flipp" style="cursor: pointer ;" hidden>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    MULTITASKING CONVERTER
+  </b>
+  <div id="panel" hidden>
+    <br><br><br><br>
+    <br><br>
+    <a href="calculator.html" class="demo1" style="cursor: pointer ;"> Calculator</a><br><br>
+    <a href="WorldClock.html" class="demo2" style="cursor: pointer ;">World Clock</a>
+    <be><br></br>
+      <a href="Front.html" class="demo3" style="cursor: pointer ;">Unit Converter</a><br><br>
+      <a href="currency.html" class="demo4" style="cursor: pointer ;">Currency Converter</a>
+  </div>
+</body>
+
+</html>

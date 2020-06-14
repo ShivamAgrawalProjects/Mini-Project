@@ -1,0 +1,147 @@
+<html>
+<center>
+
+    <head>
+        <meta name="viewport" content="width=devide-width,initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="button.css">
+        <h1>
+            <a class="ad" style="cursor: pointer ;">SPEED CONVERTER</a></h1>
+        <style>
+            @viewport {
+                zoom: 1.0;
+                width: extend-to-zoom;
+            }
+
+            @-ms-viewport {
+                width: extend-to-zoom;
+                zoom: 1.0;
+
+            }
+
+            #myVideo {
+                position: fixed;
+                ;
+                right: 0;
+                bottom: 0;
+                min-width: 100%;
+                min-height: 100%;
+                z-index: -1;
+            }
+
+            body {
+                color: white;
+                position: relative;
+                margin: 0;
+                padding: 20px;
+                background: #000;
+            }
+        </style>
+    </head>
+    <script>
+        function convert(x) {
+            if (x.id == 'k') {
+                var k = document.getElementById('k').value;
+                if (k.length == 0) {
+                    document.getElementById('m').value = '';
+                    document.getElementById('n').value = '';
+                    document.getElementById('a').value = '';
+                }
+                else {
+                    var m = k / 1.609344;
+                    var n = k / 1.852;
+                    var a = k / 1225.044;
+                    document.getElementById('m').value = m;
+                    document.getElementById('n').value = n;
+                    document.getElementById('a').value = a;
+
+                }
+            }
+            else if (x.id == 'm') {
+                var m = document.getElementById('m').value;
+                if (m.length == 0) {
+                    document.getElementById('k').value = '';
+                    document.getElementById('n').value = '';
+                    document.getElementById('a').value = '';
+                }
+                else {
+                    var k = m * 1.609344;
+                    var n = m / 1.150779;
+                    var a = m / 761.207;
+                    document.getElementById('k').value = k;
+                    document.getElementById('n').value = n;
+                    document.getElementById('a').value = a;
+
+                }
+            }
+            else if (x.id == 'n') {
+                var n = document.getElementById('n').value;
+                if (n.length == 0) {
+                    document.getElementById('k').value = '';
+                    document.getElementById('m').value = '';
+                    document.getElementById('a').value = '';
+                }
+                else {
+                    var k = n * 1.852;
+                    var m = n * 1.150779;
+                    var a = n / 661.4708;
+                    document.getElementById('k').value = k;
+                    document.getElementById('m').value = m;
+                    document.getElementById('a').value = a;
+
+                }
+            }
+            else if (x.id == 'a') {
+                var a = document.getElementById('a').value;
+                if (a.length == 0) {
+                    document.getElementById('k').value = '';
+                    document.getElementById('m').value = '';
+                    document.getElementById('n').value = '';
+                }
+                else {
+                    var k = a * 1225.044;
+                    var m = a * 761.207;
+                    var n = a * 661.4708;
+                    document.getElementById('k').value = k;
+                    document.getElementById('m').value = m;
+                    document.getElementById('n').value = n;
+
+                }
+            }
+
+        }
+
+    </script>
+
+    <body>
+        <video autoplay muted loop id="myVideo">
+            <source src="BGVEDIO3.mp4" type="video/mp4">
+        </video </body><br><br><br>
+
+        <body style="background-color: darkgrey;">
+            <table>
+                <tr>
+                    <th> <b> Km/hr </b></th>
+                    <td><input type="number" placeholder="Kilometers/hour" id="k" size="5" onkeyup="convert(this);">
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <th>M/hr</th>
+                    <td><input type="number" placeholder="meters/hours" id="m" size="5" onkeyup="convert(this);"></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <th> <b>Knots </b></th>
+                    <td><input type="number" placeholder="Knots" id="n" size="5" onkeyup="convert(this);"></td>
+                </tr>
+                <tr>
+                    <th>Mach</th>
+                    <td><input type="number" placeholder="Mach" id="a" size="5" onkeyup="convert(this);"></td>
+                </tr>
+            </table>
+
+</center>
+<BR><BR>
+<a class="ab" href="Front.html">Previous</a><br><br>
+
+</html>

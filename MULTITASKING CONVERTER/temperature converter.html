@@ -1,0 +1,116 @@
+<html>
+<center>
+
+    <head>
+        <meta name="viewport" content="width=devide-width,initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="button.css">
+        <h1>
+            <a class="ad" style="cursor: pointer ;">TEMPERATURE CONVERTER</a></h1>
+        <style>
+            @viewport {
+                zoom: 1.0;
+                width: extend-to-zoom;
+            }
+
+            @-ms-viewport {
+                width: extend-to-zoom;
+                zoom: 1.0;
+
+            }
+
+            #myVideo {
+                position: fixed;
+                ;
+                right: 0;
+                bottom: 0;
+                min-width: 100%;
+                min-height: 100%;
+                z-index: -1;
+            }
+
+            body {
+                color: white;
+                position: relative;
+                margin: 0;
+                padding: 20px;
+                background: #000;
+            }
+        </style>
+    </head>
+    <script>
+        function convert(x) {
+            if (x.id == 'f') {
+                var f = document.getElementById('f').value;
+                if (f.length == 0) {
+                    document.getElementById('c').value = '';
+                    document.getElementById('k').value = '';
+                }
+                else {
+                    var c = 5.0 / 9.0 * (f - 32);
+                    var k = ((f - 32) / 1.8) + 273.15;
+                    document.getElementById('c').value = c;
+                    document.getElementById('k').value = k;
+                }
+            }
+            else if (x.id == 'c') {
+                var c = document.getElementById('c').value;
+                if (c.length == 0) {
+                    document.getElementById('f').value = '';
+                    document.getElementById('k').value = '';
+                }
+                else {
+                    var f = (c * 1.8) + 32;
+                    var k = c + 273.15;
+                    document.getElementById('f').value = f;
+                    document.getElementById('k').value = k;
+                }
+            }
+            else if (x.id == 'k') {
+                var k = document.getElementById('k').value;
+                if (k.length == 0) {
+                    document.getElementById('f').value = '';
+                    document.getElementById('c').value = '';
+                }
+                else {
+                    var f = ((k - 273.15) * 1.8) + 32;
+                    var c = k - 273.15;
+                    document.getElementById('f').value = f;
+                    document.getElementById('c').value = c;
+                }
+            }
+
+        }
+    </script>
+
+    <body>
+        <video autoplay muted loop id="myVideo">
+            <source src="BGVEDIO3.mp4" type="video/mp4">
+        </video </body><br><br><br>
+
+        <body style="background-color: darkgrey;">
+            <table>
+                <tr>
+                    <th> <b> Fahrenheit </b></th>
+                    <td><input type="number" placeholder="Fahrenheit" id="f" size="5" onkeyup="convert(this);"></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <th>Celsius</th>
+                    <td><input type="number" placeholder="Celsius" id="c" size="5" onkeyup="convert(this);"></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <th> <b> Kelvin </b></th>
+                    <td><input type="number" placeholder="Kelvin" id="k" size="5" onkeyup="convert(this);"></td>
+                </tr>
+
+            </table>
+
+</center><br><br>
+
+<BR><BR>
+<a class="ab" href="Front.html">Previous</a><br><br>
+</body>
+
+
+</html>

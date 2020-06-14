@@ -1,0 +1,269 @@
+<html>
+<center>
+
+    <head>
+        <meta name="viewport" content="width=devide-width,initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="button.css">
+        <h1>
+            <a class="ad" style="cursor: pointer ;">LENGTH CONVERTER</a></h1>
+        <style>
+            @viewport {
+                zoom: 1.0;
+                width: extend-to-zoom;
+            }
+
+            @-ms-viewport {
+                width: extend-to-zoom;
+                zoom: 1.0;
+
+            }
+
+            #myVideo {
+                position: fixed;
+                ;
+                right: 0;
+                bottom: 0;
+                min-width: 100%;
+                min-height: 100%;
+                z-index: -1;
+            }
+
+            body {
+                color: rgb(238, 240, 241);
+                position: relative;
+
+                margin: 0;
+                padding: 20px;
+                background: #000;
+            }
+        </style>
+    </head>
+    <script>
+        function convert(x) {
+            if (x.id == 'f') {
+                var f = document.getElementById('f').value;
+                if (f.length == 0) {
+                    document.getElementById('m').value = '';
+                    document.getElementById('i').value = '';
+                    document.getElementById('c').value = '';
+                    document.getElementById('y').value = '';
+                    document.getElementById('k').value = '';
+                    document.getElementById('ms').value = '';
+                }
+                else {
+                    var m = f / 3.2808;
+                    var i = f * 12;
+                    var c = f / 0.032808;
+                    var y = f * 0.33333;
+                    var k = f / 3280.8;
+                    var ms = f * 0.00018939;
+                    document.getElementById('m').value = m;
+                    document.getElementById('i').value = i;
+                    document.getElementById('c').value = c;
+                    document.getElementById('y').value = y;
+                    document.getElementById('k').value = k;
+                    document.getElementById('ms').value = ms;
+                }
+            }
+            else if (x.id == 'm') {
+                var m = document.getElementById('m').value;
+                if (m.length == 0) {
+                    document.getElementById('f').value = '';
+                    document.getElementById('i').value = '';
+                    document.getElementById('c').value = '';
+                    document.getElementById('y').value = '';
+                    document.getElementById('k').value = '';
+                    document.getElementById('ms').value = '';
+                }
+                else {
+                    var f = m * 3.2808;
+                    var i = m * 39.370;
+                    var c = m / 0.01;
+                    var y = m * 1.0936;
+                    var k = m / 1000;
+                    var ms = m * 0.00062137;
+                    document.getElementById('f').value = f;
+                    document.getElementById('i').value = i;
+                    document.getElementById('c').value = c;
+                    document.getElementById('y').value = y;
+                    document.getElementById('k').value = k;
+                    document.getElementById('ms').value = ms;
+                }
+            }
+            else if (x.id == 'i') {
+                var i = document.getElementById('i').value;
+                if (i.length == 0) {
+                    document.getElementById('f').value = '';
+                    document.getElementById('m').value = '';
+                    document.getElementById('c').value = '';
+                    document.getElementById('y').value = '';
+                    document.getElementById('k').value = '';
+                    document.getElementById('ms').value = '';
+                }
+                else {
+                    var f = i * 0.083333;
+                    var m = i / 39.370;
+                    var c = i / 0.39370;
+                    var y = i * 0.027778;
+                    var k = i / 39370;
+                    var ms = i * 0.000015783;
+                    document.getElementById('f').value = f;
+                    document.getElementById('m').value = m;
+                    document.getElementById('c').value = c;
+                    document.getElementById('y').value = y;
+                    document.getElementById('k').value = k;
+                    document.getElementById('ms').value = ms;
+                }
+            }
+            else if (x.id == 'c') {
+                var c = document.getElementById('c').value;
+                if (c.length == 0) {
+                    document.getElementById('f').value = '';
+                    document.getElementById('m').value = '';
+                    document.getElementById('i').value = '';
+                    document.getElementById('y').value = '';
+                    document.getElementById('k').value = '';
+                    document.getElementById('ms').value = '';
+                }
+                else {
+                    var f = c * 0.032808;
+                    var m = c / 100;
+                    var i = c * 0.39370;
+                    var y = c * 0.010936;
+                    var k = c / 100000;
+                    var ms = c * 0.0000062137;
+                    document.getElementById('f').value = f;
+                    document.getElementById('m').value = m;
+                    document.getElementById('i').value = i;
+                    document.getElementById('y').value = y;
+                    document.getElementById('k').value = k;
+                    document.getElementById('ms').value = ms;
+                }
+            }
+            else if (x.id == 'y') {
+                var y = document.getElementById('y').value;
+                if (y.length == 0) {
+                    document.getElementById('f').value = '';
+                    document.getElementById('m').value = '';
+                    document.getElementById('i').value = '';
+                    document.getElementById('c').value = '';
+                    document.getElementById('k').value = '';
+                    document.getElementById('ms').value = '';
+                }
+                else {
+                    var f = y * 3;
+                    var m = y / 1.0936;
+                    var i = y * 36;
+                    var c = y / 0.010936;
+                    var k = y / 1093.6;
+                    var ms = y * 0.00056818;
+                    document.getElementById('f').value = f;
+                    document.getElementById('m').value = m;
+                    document.getElementById('i').value = i;
+                    document.getElementById('c').value = c;
+                    document.getElementById('k').value = k;
+                    document.getElementById('ms').value = ms;
+                }
+            }
+            else if (x.id == 'k') {
+                var k = document.getElementById('k').value;
+                if (k.length == 0) {
+                    document.getElementById('f').value = '';
+                    document.getElementById('m').value = '';
+                    document.getElementById('i').value = '';
+                    document.getElementById('c').value = '';
+                    document.getElementById('y').value = '';
+                    document.getElementById('ms').value = '';
+                }
+                else {
+                    var f = k * 3280.8;
+                    var m = k * 1000;
+                    var i = k * 39370;
+                    var c = k * 100000;
+                    var y = k * 1093.6;
+                    var ms = k * 0.62137;
+                    document.getElementById('f').value = f;
+                    document.getElementById('m').value = m;
+                    document.getElementById('i').value = i;
+                    document.getElementById('c').value = c;
+                    document.getElementById('y').value = y;
+                    document.getElementById('ms').value = ms;
+                }
+            }
+            else if (x.id == 'ms') {
+                var ms = document.getElementById('ms').value;
+                if (ms.length == 0) {
+                    document.getElementById('f').value = '';
+                    document.getElementById('m').value = '';
+                    document.getElementById('i').value = '';
+                    document.getElementById('c').value = '';
+                    document.getElementById('y').value = '';
+                    document.getElementById('k').value = '';
+                }
+                else {
+                    var f = ms * 5280;
+                    var m = ms / 0.00062137;
+                    var i = ms * 63360;
+                    var c = ms / 0.0000062137;
+                    var y = ms * 1760;
+                    var k = ms / 0.62137;
+                    document.getElementById('f').value = f;
+                    document.getElementById('m').value = m;
+                    document.getElementById('i').value = i;
+                    document.getElementById('c').value = c;
+                    document.getElementById('y').value = y;
+                    document.getElementById('k').value = k;
+                }
+            }
+        }
+
+    </script>
+
+    <body>
+        <video autoplay muted loop id="myVideo">
+            <source src="BGVEDIO3.mp4" type="video/mp4">
+        </video>
+    </body><br><br><br>
+
+    <body style="background-color: #000;">
+        <table>
+            <tr>
+                <th> <b> Feet </b></th>
+                <td><input type="number" placeholder="Feet" id="f" size="5" onkeyup="convert(this);"></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <th>Meters</th>
+                <td><input type="number" placeholder="Meters" id="m" size="5" onkeyup="convert(this);"></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <th> <b>Inches </b></th>
+                <td><input type="number" placeholder="Inches" id="i" size="5" onkeyup="convert(this);"></td>
+            <tr></tr>
+            <tr>
+                <th>cm</th>
+                <td><input type="number" placeholder="cm" id="c" size="5" onkeyup="convert(this);"></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <th> <b> Yards </b></th>
+                <td><input type="number" placeholder="Yards" id="y" size="5" onkeyup="convert(this);"></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <th>Kilometers</th>
+                <td><input type="number" placeholder="Kilometers" id="k" size="5" onkeyup="convert(this);"></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <th> <b>Miles </b></th>
+                <td><input type="number" placeholder="Miles" id="ms" size="5" onkeyup="convert(this);"></td>
+            </tr>
+        </table>
+</center>
+<BR><BR>
+<a class="ab" href="Front.html">Previous</a><br><br>
+</body>
+
+</html>

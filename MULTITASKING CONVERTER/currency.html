@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=devide-width,initial-scale=1">
+  <title>Currencty Converter</title>
+  <link rel="stylesheet" href="heading.css">
+  <link rel="stylesheet" href="cur1.css">
+  <link rel="stylesheet" type="text/css" href="button.css">
+</head>
+<style>
+  @viewport {
+    zoom: 1.0;
+    width: extend-to-zoom;
+  }
+
+  @-ms-viewport {
+    width: extend-to-zoom;
+    zoom: 1.0;
+
+  }
+
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+  #hello {
+    text-align: left;
+    position: relative;
+  }
+</style>
+
+<body>
+  <video autoplay muted loop id="myVideo">
+    <source src="BGVEDIO6.mp4" type="video/mp4">
+  </video>
+  <div class="container" id="panel">
+    <div class="header">
+      <h1>Currency Converter</h1>
+    </div>
+    <div class="date"></div>
+    <ul class="currencies"></ul>
+    <button class="add-currency-btn"><i class="fas fa-long-arrow-alt-left"></i>Add Currency</button>
+    <ul class="add-currency-list"></ul>
+  </div>
+  <a class="ab" href="HOME_PAGE.html" id="hello">Previous</a>
+  <script src="cur2.js"></script>
+
+  </html>

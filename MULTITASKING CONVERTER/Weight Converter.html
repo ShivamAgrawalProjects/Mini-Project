@@ -1,0 +1,178 @@
+<html>
+<center>
+
+    <head>
+        <meta name="viewport" content="width=devide-width,initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="button.css">
+        <h1>
+            <a class="ad" style="cursor: pointer ;">WEIGHT CONVERTER</a></h1>
+        <style>
+            @viewport {
+                zoom: 1.0;
+                width: extend-to-zoom;
+            }
+
+            @-ms-viewport {
+                width: extend-to-zoom;
+                zoom: 1.0;
+            }
+
+            #myVideo {
+                position: fixed;
+                ;
+                right: 0;
+                bottom: 0;
+                min-width: 100%;
+                min-height: 100%;
+                z-index: -1;
+            }
+
+            body {
+                color: white;
+                position: relative;
+                margin: 0;
+                padding: 20px;
+                background: #000;
+            }
+        </style>
+    </head>
+    <script>
+        function convert(x) {
+            if (x.id == 'p') {
+                var p = document.getElementById('p').value;
+                if (p.length == 0) {
+                    document.getElementById('k').value = '';
+                    document.getElementById('o').value = '';
+                    document.getElementById('g').value = '';
+                    document.getElementById('s').value = '';
+                }
+                else {
+                    var k = p / 2.2046;
+                    var o = p * 16;
+                    var g = p / 0.0022046;
+                    var s = p * 0.071429;
+                    document.getElementById('k').value = k;
+                    document.getElementById('o').value = o;
+                    document.getElementById('g').value = g;
+                    document.getElementById('s').value = s;
+                }
+            }
+            else if (x.id == 'k') {
+                var k = document.getElementById('k').value;
+                if (k.length == 0) {
+                    document.getElementById('p').value = '';
+                    document.getElementById('o').value = '';
+                    document.getElementById('g').value = '';
+                    document.getElementById('s').value = '';
+                }
+                else {
+                    var p = k * 2.2046;
+                    var o = k * 35.274;
+                    var g = k * 1000;
+                    var s = k * 0.1574;
+                    document.getElementById('p').value = p;
+                    document.getElementById('o').value = o;
+                    document.getElementById('g').value = g;
+                    document.getElementById('s').value = s;
+                }
+            }
+            else if (x.id == 'o') {
+                var o = document.getElementById('o').value;
+                if (o.length == 0) {
+                    document.getElementById('p').value = '';
+                    document.getElementById('k').value = '';
+                    document.getElementById('g').value = '';
+                    document.getElementById('s').value = '';
+                }
+                else {
+                    var p = o * 0.0625;
+                    var k = o / 35.274;
+                    var g = o / 0.035274;
+                    var s = o * 0.0044643;
+                    document.getElementById('p').value = p;
+                    document.getElementById('k').value = k;
+                    document.getElementById('g').value = g;
+                    document.getElementById('s').value = s;
+                }
+            }
+            else if (x.id == 'g') {
+                var g = document.getElementById('g').value;
+                if (g.length == 0) {
+                    document.getElementById('p').value = '';
+                    document.getElementById('k').value = '';
+                    document.getElementById('o').value = '';
+                    document.getElementById('s').value = '';
+                }
+                else {
+                    var p = g * 0.0022046;
+                    var k = g / 1000;
+                    var o = g * 0.035274;
+                    var s = g * 0.00015747;
+                    document.getElementById('p').value = p;
+                    document.getElementById('k').value = k;
+                    document.getElementById('o').value = o;
+                    document.getElementById('s').value = s;
+                }
+            }
+            else if (x.id == 's') {
+                var s = document.getElementById('s').value;
+                if (s.length == 0) {
+                    document.getElementById('p').value = '';
+                    document.getElementById('k').value = '';
+                    document.getElementById('o').value = '';
+                    document.getElementById('g').value = '';
+                }
+                else {
+                    var p = s * 14;
+                    var k = s / 0.15747;
+                    var o = s * 224;
+                    var g = s / 0.00015747;
+                    document.getElementById('p').value = p;
+                    document.getElementById('k').value = k;
+                    document.getElementById('o').value = o;
+                    document.getElementById('g').value = g;
+                }
+            }
+        }
+
+    </script>
+
+    <body>
+        <video autoplay muted loop id="myVideo">
+            <source src="BGVEDIO3.mp4" type="video/mp4">
+        </video </body><br><br><br>
+
+        <body style="background-color: darkgrey;">
+            <table>
+                <tr>
+                    <th> <b> Pounds </b></th>
+                    <td><input type="number" placeholder="Pounds" id="p" size="5" onkeyup="convert(this);"></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <th>Kilograms</th>
+                    <td><input type="number" placeholder="Kilograms" id="k" size="5" onkeyup="convert(this);"></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <th> <b>Ounces </b></th>
+                    <td><input type="number" placeholder="Ounces" id="o" size="5" onkeyup="convert(this);"></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <th>Grams</th>
+                    <td><input type="number" placeholder="Grams" id="g" size="5" onkeyup="convert(this);"></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <th>Stones</th>
+                    <td><input type="number" placeholder="Stones" id="s" size="5" onkeyup="convert(this);"></td>
+                </tr>
+            </table>
+</center>
+
+<BR><BR>
+<a class="ab" href="Front.html">Previous</a><br><br>
+</body>
+
+</html>
